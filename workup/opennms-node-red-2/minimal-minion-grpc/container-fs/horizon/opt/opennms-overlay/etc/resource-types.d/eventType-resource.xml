@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<resource-types>
+  <resourceType name="eventType" label="Event Application" resourceLabel="Instance ${instance}">
+     <persistenceSelectorStrategy class="org.opennms.netmgt.collection.support.PersistAllSelectorStrategy"/>
+     <storageStrategy class="org.opennms.netmgt.collection.support.IndexStorageStrategy"/>
+  </resourceType>
+</resource-types>
+
+

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>org.opennms.examples</groupId>
+	<artifactId>MqttClient.deploy</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<OpenNMSMqttClient.version>0.0.8</OpenNMSMqttClient.version>
+	</properties>
+
+    <!-- profiles to either use local maven repo or download from releases -->
+    <!-- default is to download from releases.which avoids having to compile plugin locally -->
+    <!-- to use local repo use mvn clean install -Plocal-maven -->
+	<profiles>
+		<profile>
+			<id>download-release</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<!-- copies built kar file to opennms docker deploy  directory -->
+					<plugin>
+						<groupId>com.googlecode.maven-download-plugin</groupId>
+						<artifactId>download-maven-plugin</artifactId>
+						<version>1.3.0</version>
+						<executions>
+							<execution>
+								<!-- the wget goal actually binds itself to this
+								phase by default -->
+								<phase>process-resources</phase>
+								<goals>
+									<goal>wget</goal>
+								</goals>
+								<configuration>
+									<url>https://github.com/opennms-forge/opennms-mqtt-plugin/releases/download/v${OpenNMSMqttClient.version}/MqttClient.kar-package-${OpenNMSMqttClient.version}.kar</url>
+									<outputFileName>MqttClient.kar-package-${OpenNMSMqttClient.version}.kar</outputFileName>
+									<outputDirectory>${project.basedir}/container-fs/horizon/opt/opennms/deploy/</outputDirectory>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>local-maven</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<!-- copies built kar file to opennms docker deploy directory -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-dependency-plugin</artifactId>
+						<version>3.0.1</version>
+						<executions>
+							<execution>
+								<id>copy</id>
+								<phase>package</phase>
+								<goals>
+									<goal>copy</goal>
+								</goals>
+								<configuration>
+									<artifactItems>
+										<artifactItem>
+											<groupId>org.opennms.plugins</groupId>
+											<artifactId>MqttClient.kar-package</artifactId>
+											<version>
+												${OpenNMSMqttClient.version}</version>
+											<type>kar</type>
+											<overWrite>true</overWrite>
+											<outputDirectory>${project.basedir}/container-fs/horizon/opt/opennms/deploy/</outputDirectory>
+										</artifactItem>
+									</artifactItems>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
+	<build>
+		<plugins>
+
+
+			<plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>default-clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+					</execution>
+					<!-- cleans deployed files from opennms docker deploy
+					directory -->
+					<execution>
+						<id>dependency-clean</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>clean</goal>
+						</goals>
+						<configuration>
+							<filesets>
+								<fileset>
+									<directory>
+										${project.basedir}/container-fs/horizon/opt/opennms/deploy/</directory>
+									<followSymlinks>false</followSymlinks>
+									<excludes>
+										<exclude>**/README.md</exclude>
+										<exclude>.gitkeep</exclude>
+									</excludes>
+								</fileset>
+							</filesets>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>

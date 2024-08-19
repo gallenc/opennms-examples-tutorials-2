@@ -1,0 +1,5 @@
+FROM openjdk:11
+COPY ./target/client/ /tmp
+COPY ./kafkaclient.properties /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java","-Dkafkaclient.properties=/tmp/kafkaclient.properties","-jar","kafka-java-client-one-jar.jar","--shortmessages"]

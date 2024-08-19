@@ -1,0 +1,703 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 6,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "e367360e-cf60-4274-bf9e-afd41b9185ac"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "QBandRSSI"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "QBandRSSI",
+              "name": "QBandRSSI",
+              "relativePath": "snmp/fs/mqtt/YAKU001/mqtt",
+              "rrdFile": "QBandRSSI.rrd"
+            },
+            "node": {
+              "assets": {
+                "category": "Unspecified",
+                "id": 7,
+                "lastModifiedBy": "",
+                "lastModifiedDate": 1714120215287
+              },
+              "categories": [],
+              "createTime": "2024-04-26T08:30:15.287Z",
+              "foreignId": "YAKU001",
+              "foreignSource": "mqtt",
+              "id": 2,
+              "ipInterfaces": [],
+              "label": "YAKU001",
+              "location": "Default",
+              "snmpInterfaces": [],
+              "type": {
+                "id": "A",
+                "label": "ACTIVE"
+              }
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "interfaceSnmp[254.0.0.1]",
+              "label": "254.0.0.1 (*) | 254.0.0.1",
+              "name": "254.0.0.1",
+              "parentId": "node[mqtt:YAKU001]",
+              "rrdGraphAttributes": {
+                "QBandRSSI": {
+                  "name": "QBandRSSI",
+                  "relativePath": "snmp/fs/mqtt/YAKU001/254.0.0.1",
+                  "rrdFile": "QBandRSSI.rrd"
+                }
+              },
+              "stringPropertyAttributes": {},
+              "typeLabel": "SNMP Interface Data"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "a6f7bef3-a13a-46b5-b699-051a2b1364c9"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "QbandRSSI",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "e367360e-cf60-4274-bf9e-afd41b9185ac"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "NodeBWBandP"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": true
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "NodeBWBandP"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "blue",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "NodeBWBandP",
+              "name": "NodeBWBandP",
+              "relativePath": "snmp/fs/mqtt/YAKU001/mqtt",
+              "rrdFile": "NodeBWBandP.rrd"
+            },
+            "node": {
+              "assets": {
+                "category": "Unspecified",
+                "id": 7,
+                "lastModifiedBy": "",
+                "lastModifiedDate": 1714120215287
+              },
+              "categories": [],
+              "createTime": "2024-04-26T08:30:15.287Z",
+              "foreignId": "YAKU001",
+              "foreignSource": "mqtt",
+              "id": 2,
+              "ipInterfaces": [],
+              "label": "YAKU001",
+              "location": "Default",
+              "snmpInterfaces": [],
+              "type": {
+                "id": "A",
+                "label": "ACTIVE"
+              }
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "interfaceSnmp[254.0.0.1]",
+              "label": "254.0.0.1 (*) | 254.0.0.1",
+              "name": "254.0.0.1",
+              "parentId": "node[mqtt:YAKU001]",
+              "rrdGraphAttributes": {
+                "QBandRSSI": {
+                  "name": "QBandRSSI",
+                  "relativePath": "snmp/fs/mqtt/YAKU001/254.0.0.1",
+                  "rrdFile": "QBandRSSI.rrd"
+                }
+              },
+              "stringPropertyAttributes": {},
+              "typeLabel": "SNMP Interface Data"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "a6f7bef3-a13a-46b5-b699-051a2b1364c9"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Node BW Band P",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "e367360e-cf60-4274-bf9e-afd41b9185ac"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CabTemp"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "CabTemp",
+              "name": "CabTemp",
+              "relativePath": "snmp/fs/mqtt/YAKU001/mqtt",
+              "rrdFile": "CabTemp.rrd"
+            },
+            "node": {
+              "assets": {
+                "category": "Unspecified",
+                "id": 7,
+                "lastModifiedBy": "",
+                "lastModifiedDate": 1714120215287
+              },
+              "categories": [],
+              "createTime": "2024-04-26T08:30:15.287Z",
+              "foreignId": "YAKU001",
+              "foreignSource": "mqtt",
+              "id": 2,
+              "ipInterfaces": [],
+              "label": "YAKU001",
+              "location": "Default",
+              "snmpInterfaces": [],
+              "type": {
+                "id": "A",
+                "label": "ACTIVE"
+              }
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "interfaceSnmp[254.0.0.1]",
+              "label": "254.0.0.1 (*) | 254.0.0.1",
+              "name": "254.0.0.1",
+              "parentId": "node[mqtt:YAKU001]",
+              "rrdGraphAttributes": {
+                "QBandRSSI": {
+                  "name": "QBandRSSI",
+                  "relativePath": "snmp/fs/mqtt/YAKU001/254.0.0.1",
+                  "rrdFile": "QBandRSSI.rrd"
+                }
+              },
+              "stringPropertyAttributes": {},
+              "typeLabel": "SNMP Interface Data"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "a6f7bef3-a13a-46b5-b699-051a2b1364c9"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "cabinate temp",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "opennms-performance-datasource",
+        "uid": "e367360e-cf60-4274-bf9e-afd41b9185ac"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "SiteTemp"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "attribute": {
+            "attribute": {
+              "label": "SiteTemp",
+              "name": "SiteTemp",
+              "relativePath": "snmp/fs/mqtt/YAKU001/mqtt",
+              "rrdFile": "SiteTemp.rrd"
+            },
+            "node": {
+              "assets": {
+                "category": "Unspecified",
+                "id": 7,
+                "lastModifiedBy": "",
+                "lastModifiedDate": 1714120215287
+              },
+              "categories": [],
+              "createTime": "2024-04-26T08:30:15.287Z",
+              "foreignId": "YAKU001",
+              "foreignSource": "mqtt",
+              "id": 2,
+              "ipInterfaces": [],
+              "label": "YAKU001",
+              "location": "Default",
+              "snmpInterfaces": [],
+              "type": {
+                "id": "A",
+                "label": "ACTIVE"
+              }
+            },
+            "resource": {
+              "children": {
+                "offset": 0,
+                "resource": []
+              },
+              "externalValueAttributes": {},
+              "id": "interfaceSnmp[254.0.0.1]",
+              "label": "254.0.0.1 (*) | 254.0.0.1",
+              "name": "254.0.0.1",
+              "parentId": "node[mqtt:YAKU001]",
+              "rrdGraphAttributes": {
+                "QBandRSSI": {
+                  "name": "QBandRSSI",
+                  "relativePath": "snmp/fs/mqtt/YAKU001/254.0.0.1",
+                  "rrdFile": "QBandRSSI.rrd"
+                }
+              },
+              "stringPropertyAttributes": {},
+              "typeLabel": "SNMP Interface Data"
+            }
+          },
+          "datasource": {
+            "type": "opennms-performance-datasource",
+            "uid": "a6f7bef3-a13a-46b5-b699-051a2b1364c9"
+          },
+          "hide": false,
+          "performanceType": {
+            "label": "Attribute",
+            "value": 1
+          },
+          "refId": "A"
+        }
+      ],
+      "title": "Panel Title",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Altohaps 1 eventPm",
+  "uid": "e2361f16-b8d1-4fd3-9497-f2f9785af3ca",
+  "version": 3,
+  "weekStart": ""
+}

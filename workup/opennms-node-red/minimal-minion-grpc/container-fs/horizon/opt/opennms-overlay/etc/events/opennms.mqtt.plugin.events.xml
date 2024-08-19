@@ -1,0 +1,64 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+   <event>
+      <uei>uei.opennms.org/mqttplugin/message/event</uei>
+      <event-label>OpenNMS mqtt plugin received message from topic %parm[message-topic]</event-label>
+      <descr>OpenNMS mqtt plugin received message from topic %parm[message-topic] message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin received message from topic %parm[message-topic] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Indeterminate</severity>
+   </event>
+   <event>
+      <uei>uei.opennms.org/plugin/MqttReceiver/unknownNodeEvent</uei>
+      <event-label>OpenNMS mqtt plugin unknown node nodeCriteria=%parm[nodeCriteria]</event-label>
+      <descr>OpenNMS mqtt plugin unknown node nodeCriteria=%parm[nodeCriteria]message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin unknown node nodeCriteria=%parm[nodeCriteria] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Warning</severity>
+   </event>
+
+   <event>
+      <uei>uei.opennms.org/mqttplugin/message/event/read/1</uei>
+      <event-label>OpenNMS mqtt plugin received READ alarm raise message from topic %parm[message-topic]</event-label>
+      <descr>OpenNMS mqtt plugin received READ alarm raise message from topic %parm[message-topic] message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin received READ alarm raise message from topic %parm[message-topic] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Warning</severity>
+      <alarm-data reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%" alarm-type="1" auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/message/event/read/0</uei>
+      <event-label>OpenNMS mqtt plugin received READ alarm clear message from topic %parm[message-topic]</event-label>
+      <descr>OpenNMS mqtt plugin received READ alarm clear message from topic %parm[message-topic] message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin received READ alarm clear message from topic %parm[message-topic] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Normal</severity>
+      <alarm-data reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"  alarm-type="2" 
+      clear-key="uei.opennms.org/mqttplugin/message/event/read/1:%dpname%:%nodeid%:%parm[message-topic]%" auto-clean="false" />
+   </event>
+   
+      <event>
+      <uei>uei.opennms.org/mqttplugin/message/event/write/1</uei>
+      <event-label>OpenNMS mqtt plugin received WRITE alarm raise message from topic %parm[message-topic]</event-label>
+      <descr>OpenNMS mqtt plugin received WRITE alarm raise message from topic %parm[message-topic] message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin received WRITE alarm raise message from topic %parm[message-topic] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Warning</severity>
+      <alarm-data reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%" alarm-type="1" auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/message/event/write/0</uei>
+      <event-label>OpenNMS mqtt plugin received WRITE alarm clear message from topic %parm[message-topic]</event-label>
+      <descr>OpenNMS mqtt plugin received WRITE alarm clear message from topic %parm[message-topic] message parameters: %parm[all]%</descr>
+      <logmsg dest="logndisplay">
+            OpenNMS mqtt plugin received WRITE alarm clear message from topic %parm[message-topic] message parameters: %parm[all]%
+      </logmsg>
+      <severity>Normal</severity>
+      <alarm-data reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"  alarm-type="2" 
+      clear-key="uei.opennms.org/mqttplugin/message/event/write/1:%dpname%:%nodeid%:%parm[message-topic]%" auto-clean="false" />
+   </event>
+</events>

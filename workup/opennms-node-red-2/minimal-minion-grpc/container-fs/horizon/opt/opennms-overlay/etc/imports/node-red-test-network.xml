@@ -1,0 +1,38 @@
+<model-import xmlns="http://xmlns.opennms.org/xsd/config/model-import" date-stamp="2024-04-26T09:08:27.607-04:00" foreign-source="node-red-test-network" last-import="2024-04-26T09:08:45.462-04:00">
+   <node foreign-id="node-red1" node-label="node-red1">
+      <interface ip-addr="172.20.0.3" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+   <node foreign-id="mqtt-broker" node-label="mqtt-broker">
+      <interface ip-addr="172.20.0.5" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+   <node foreign-id="mqtt-web-client" node-label="mqtt-web-client">
+      <interface ip-addr="172.20.0.6" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+   <node foreign-id="database" node-label="database">
+      <interface ip-addr="172.20.0.10" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+         <monitored-service service-name="PostgreSQL"/>
+      </interface>
+   </node>
+   <node foreign-id="horizon" node-label="horizon">
+      <interface ip-addr="172.20.0.20" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+   <node foreign-id="grafana" node-label="grafana">
+      <interface ip-addr="172.20.0.40" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+   <node foreign-id="netsnmp1" node-label="netsnmp1">
+      <interface ip-addr="172.20.0.100" status="1" snmp-primary="P">
+         <monitored-service service-name="ICMP"/>
+      </interface>
+   </node>
+</model-import>

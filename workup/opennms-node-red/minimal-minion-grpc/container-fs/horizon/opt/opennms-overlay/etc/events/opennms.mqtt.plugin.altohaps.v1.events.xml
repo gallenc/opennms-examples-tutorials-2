@@ -1,0 +1,644 @@
+<events xmlns="http://xmlns.opennms.org/xsd/eventconf">
+
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI00-GSMains/1</uei>
+      <event-label>Environmental Alarm: Ground Cabin Mains Power Failed</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Mains Power Failed</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Mains Power Failed&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI00-GSMains/0</uei>
+      <event-label>Environmental Alarm: Ground Cabin Mains Power Failed</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Mains Power Failed</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Mains Power Failed&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI00-GSMains/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI01-UPS/1</uei>
+      <event-label>Environmental Alarm: Ground Cabin UPS Down no backup power supply</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% UPS Down no backup power supply</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% UPS Down no backup power supply&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Minor</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI01-UPS/0</uei>
+      <event-label>Environmental Alarm: Ground Cabin UPS Down no backup power supply</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% UPS Down no backup power supply</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% UPS Down no backup power supply&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI01-UPS/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI02-QBandPSU/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Power Supply Unit Failed</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Power Supply Unit Failed</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Power Supply Unit Failed&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI02-QBandPSU/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Power Supply Unit Failed</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Power Supply Unit Failed</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Power Supply Unit Failed&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI02-QBandPSU/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI03-QBandPA_Off/1</uei>
+      <event-label>Payload Alarm: Ground Cabin QBand Power Amp Failed </event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% QBand Power Amp Failed </logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% QBand Power Amp Failed &lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI03-QBandPA_Off/0</uei>
+      <event-label>Payload Alarm: Ground Cabin QBand Power Amp Failed </event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% QBand Power Amp Failed </logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% QBand Power Amp Failed &lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI03-QBandPA_Off/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI04-QBandRFOvrL/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Radio Frequency Over Limit</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Radio Frequency Over Limit</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Radio Frequency Over Limit&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI04-QBandRFOvrL/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Radio Frequency Over Limit</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Radio Frequency Over Limit</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Radio Frequency Over Limit&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI04-QBandRFOvrL/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI05-QBandOverCu/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband OverCurrent above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband OverCurrent above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband OverCurrent above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI05-QBandOverCu/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband OverCurrent above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband OverCurrent above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband OverCurrent above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI05-QBandOverCu/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI06-QBandOverTm/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Temperature above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Temperature above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Temperature above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI06-QBandOverTm/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Qband Temperature above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Qband Temperature above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Qband Temperature above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI06-QBandOverTm/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI07-PosCtrlFail/1</uei>
+      <event-label>Payload Alarm: Ground Cabin S-Band Ground Station Antenna Positioner Failed</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% S-Band Ground Station %nodelabel% Antenna Positioner Failed</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% S-Band Ground Station %nodelabel% Antenna Positioner Failed&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI07-PosCtrlFail/0</uei>
+      <event-label>Payload Alarm: Ground Cabin S-Band Ground Station Antenna Positioner Failed</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% S-Band Ground Station %nodelabel% Antenna Positioner Failed</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% S-Band Ground Station %nodelabel% Antenna Positioner Failed&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI07-PosCtrlFail/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI08-VSWHigh/1</uei>
+      <event-label>Payload Alarm: Ground Cabin VSWHigh above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% VSWHigh above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% VSWHigh above safe threshold&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI08-VSWHigh/0</uei>
+      <event-label>Payload Alarm: Ground Cabin VSWHigh above safe threshold</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% VSWHigh above safe threshold</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% VSWHigh above safe threshold&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI08-VSWHigh/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI09-BayDoorStat/1</uei>
+      <event-label>Security Alarm: Ground Cabin BayDoor Open</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin %nodelabel% BayDoor Open</logmsg>
+      <descr>Security Alarm: Ground Cabin %nodelabel% BayDoor Open&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all message
+         parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI09-BayDoorStat/0</uei>
+      <event-label>Security Alarm: Ground Cabin BayDoor Open</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin %nodelabel% BayDoor Open</logmsg>
+      <descr>Security Alarm: Ground Cabin %nodelabel% BayDoor Open&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all message
+         parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI09-BayDoorStat/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI10-AntennaPSU/1</uei>
+      <event-label>Security Alarm: Ground Cabin Station SiteMonitor Down</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin Station %nodelabel% SiteMonitor Down</logmsg>
+      <descr>Security Alarm: Ground Cabin Station %nodelabel% SiteMonitor Down&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI10-AntennaPSU/0</uei>
+      <event-label>Security Alarm: Ground Cabin Station SiteMonitor Down</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin Station %nodelabel% SiteMonitor Down</logmsg>
+      <descr>Security Alarm: Ground Cabin Station %nodelabel% SiteMonitor Down&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI10-AntennaPSU/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI11-HighCapTemp/1</uei>
+      <event-label>Security Alarm: Ground Cabin High Cabinet Temperature</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin %nodelabel% High Cabinet Temperature</logmsg>
+      <descr>Security Alarm: Ground Cabin %nodelabel% High Cabinet Temperature&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI11-HighCapTemp/0</uei>
+      <event-label>Security Alarm: Ground Cabin High Cabinet Temperature</event-label>
+      <logmsg dest="logndisplay">Security Alarm: Ground Cabin %nodelabel% High Cabinet Temperature</logmsg>
+      <descr>Security Alarm: Ground Cabin %nodelabel% High Cabinet Temperature&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI11-HighCapTemp/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI12-SmokeAlarm/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Smoke Alarm triggered on</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Smoke Alarm triggered on</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Smoke Alarm triggered on&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI12-SmokeAlarm/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Smoke Alarm triggered on</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Smoke Alarm triggered on</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Smoke Alarm triggered on&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI12-SmokeAlarm/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI13-HighHumidit/1</uei>
+      <event-label>Payload Alarm: Ground Cabin High Humidity</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% High Humidity</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% High Humidity&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all message
+         parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI13-HighHumidit/0</uei>
+      <event-label>Payload Alarm: Ground Cabin High Humidity</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% High Humidity</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% High Humidity&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all message
+         parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI13-HighHumidit/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI14-AirCon/1</uei>
+      <event-label>Environmental Alarm: Ground Cabin AirConditioner down check site temperature</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% AirConditioner down check site temperature</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% AirConditioner down check site temperature&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI14-AirCon/0</uei>
+      <event-label>Environmental Alarm: Ground Cabin AirConditioner down check site temperature</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% AirConditioner down check site temperature</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% AirConditioner down check site temperature&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI14-AirCon/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI15-FanTray/1</uei>
+      <event-label>Environmental Alarm: Ground Cabin Fan Cooling System down check site temperature</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Fan Cooling System down check site temperature</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Fan Cooling System down check site temperature&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI15-FanTray/0</uei>
+      <event-label>Environmental Alarm: Ground Cabin Fan Cooling System down check site temperature</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Fan Cooling System down check site temperature</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Fan Cooling System down check site temperature&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-0@DI15-FanTray/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-1@DI00-PostnrMisalign/1</uei>
+      <event-label>Payload Alarm: Ground Cabin SBAND Antenna Positioner Misalignment</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-1@DI00-PostnrMisalign/0</uei>
+      <event-label>Payload Alarm: Ground Cabin SBAND Antenna Positioner Misalignment</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/45MR-1601-1@DI00-PostnrMisalign/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI0-QBandRSSI/1</uei>
+      <event-label>Environmental Alarm: Ground Cabin Q-BandRSSI above safe threshold</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Q-BandRSSI above safe threshold</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Q-BandRSSI above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI0-QBandRSSI/0</uei>
+      <event-label>Environmental Alarm: Ground Cabin Q-BandRSSI above safe threshold</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Cabin %nodelabel% Q-BandRSSI above safe threshold</logmsg>
+      <descr>Environmental Alarm: Ground Cabin %nodelabel% Q-BandRSSI above safe threshold&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI0-QBandRSSI/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI1-NodeBWBandPw/1</uei>
+      <event-label>Payload Alarm: Ground Cabin Customer node Band Power - outside normal limits consult Node B operator</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Customer node Band Power - outside normal limits consult Node B operator</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Customer node Band Power - outside normal limits consult Node B operator&lt;BR&gt;mqtt plugin received
+         message from topic %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI1-NodeBWBandPw/0</uei>
+      <event-label>Payload Alarm: Ground Cabin Customer node Band Power - outside normal limits consult Node B operator</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% Customer node Band Power - outside normal limits consult Node B operator</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% Customer node Band Power - outside normal limits consult Node B operator&lt;BR&gt;mqtt plugin received
+         message from topic %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI1-NodeBWBandPw/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI2-PostMisalign/1</uei>
+      <event-label>Payload Alarm: Ground Cabin SBAND Antenna Positioner Misalignment</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Major</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI2-PostMisalign/0</uei>
+      <event-label>Payload Alarm: Ground Cabin SBAND Antenna Positioner Misalignment</event-label>
+      <logmsg dest="logndisplay">Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment</logmsg>
+      <descr>Payload Alarm: Ground Cabin %nodelabel% SBAND Antenna Positioner Misalignment&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-3800-0@AI2-PostMisalign/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI3-SiteTemp/1</uei>
+      <event-label>Environmental Alarm: Ground Station Site Temperature above safe levels</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Station %nodelabel% Site Temperature above safe levels</logmsg>
+      <descr>Environmental Alarm: Ground Station %nodelabel% Site Temperature above safe levels&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI3-SiteTemp/0</uei>
+      <event-label>Environmental Alarm: Ground Station Site Temperature above safe levels</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Station %nodelabel% Site Temperature above safe levels</logmsg>
+      <descr>Environmental Alarm: Ground Station %nodelabel% Site Temperature above safe levels&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI3-SiteTemp/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI4-CabTemp/1</uei>
+      <event-label>Environmental Alarm: Ground Station Cabinet Temperature above safe levels</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Station %nodelabel% Cabinet Temperature above safe levels</logmsg>
+      <descr>Environmental Alarm: Ground Station %nodelabel% Cabinet Temperature above safe levels&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="1"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI4-CabTemp/0</uei>
+      <event-label>Environmental Alarm: Ground Station Cabinet Temperature above safe levels</event-label>
+      <logmsg dest="logndisplay">Environmental Alarm: Ground Station %nodelabel% Cabinet Temperature above safe levels</logmsg>
+      <descr>Environmental Alarm: Ground Station %nodelabel% Cabinet Temperature above safe levels&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Cleared</severity>
+      <alarm-data
+         reduction-key="%uei%:%dpname%:%nodeid%:%parm[message-topic]%"
+         alarm-type="2"
+         clear-key="uei.opennms.org/mqttplugin/altohaps/v1/read/AnalogueInput/45MR-6810-0@AI4-CabTemp/1:%dpname%:%nodeid%:%parm[message-topic]%"
+         auto-clean="false"/>
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandTxPower/1</uei>
+      <event-label>Command: Ground Station Power Amp Power Amp RF Disconnect</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp Power Amp RF Disconnect</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp Power Amp RF Disconnect&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandTxPower/0</uei>
+      <event-label>Command: Ground Station Power Amp Power Amp RF Disconnect</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp Power Amp RF Disconnect</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp Power Amp RF Disconnect&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Normal</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandPARF_Discon/1</uei>
+      <event-label>Command: Ground Station Power Amp has been reset</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp has been reset</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp has been reset&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandPARF_Discon/0</uei>
+      <event-label>Command: Ground Station Power Amp has been disconnected</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp has been disconnected</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp has been reset&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Normal</severity>
+
+   </event>
+      <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandPAReset/1</uei>
+      <event-label>Command: Ground Station Power Amp has been reset</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp has been reset</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp has been reset&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@QBandPAReset/0</uei>
+      <event-label>Command: Ground Station Power Amp has been reset</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Power Amp has been reset</logmsg>
+      <descr>Command: Ground Station %nodelabel% Power Amp has been reset&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Normal</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@SiteFWReboot/1</uei>
+      <event-label>Command: Ground Station Site Firewall has been rebooted</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Site Firewall has been rebooted</logmsg>
+      <descr>Command: Ground Station %nodelabel% Site Firewall has been rebooted&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@SiteFWReboot/0</uei>
+      <event-label>Command: Ground Station Site Firewall has been rebooted</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Site Firewall has been rebooted</logmsg>
+      <descr>Command: Ground Station %nodelabel% Site Firewall has been rebooted&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt; all
+         message parameters: %parm[all]% </descr>
+      <severity>Normal</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@Door/1</uei>
+      <event-label>Command: Ground Station Door Status open when relayStaturs = 1</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Door Status open when relayStaturs = 1</logmsg>
+      <descr>Command: Ground Station %nodelabel% Door Status open when relayStaturs = 1&lt;BR&gt;mqtt plugin received message from topic
+         %parm[message-topic]&lt;BR&gt; all message parameters: %parm[all]% </descr>
+      <severity>Warning</severity>
+
+   </event>
+   <event>
+      <uei>uei.opennms.org/mqttplugin/altohaps/v1/write/RemoteControl/45MR-2404-0@Door/0</uei>
+      <event-label>Command: Ground Station Door Closed when relayStatus = 0</event-label>
+      <logmsg dest="logndisplay">Command: Ground Station %nodelabel% Door Closed when relayStatus = 0</logmsg>
+      <descr>Command: Ground Station %nodelabel% Door Closed when relayStatus = 0&lt;BR&gt;mqtt plugin received message from topic %parm[message-topic]&lt;BR&gt;
+         all message parameters: %parm[all]% </descr>
+      <severity>Normal</severity>
+
+   </event>
+
+</events>

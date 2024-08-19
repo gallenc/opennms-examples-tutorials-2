@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.0</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>org.opennms.examples.integration</groupId>
+	<artifactId>kafka-alarm-client</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>kafka-alarm-client</name>
+	<description>spring boot example opennms integration</description>
+	<properties>
+		<java.version>11</java.version>
+		<protobufVersion>3.16.1</protobufVersion>
+		<protobuf2Version>2.6.1</protobuf2Version>
+		<guavaVersion>18.0</guavaVersion>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<module>kafka-java-client</module>
+				<module>web</module>
+			</modules>
+		</profile>
+		<profile>
+		    <!-- run this profile with docker desktop to allow docker images to be built -->
+		    <!-- mvn clean install -P docker -->
+			<id>docker</id>
+			<modules>
+				<module>kafka-java-client</module>
+				<module>web</module>
+				<module>docker</module>
+			</modules>
+		</profile>
+
+	</profiles>
+
+
+</project>

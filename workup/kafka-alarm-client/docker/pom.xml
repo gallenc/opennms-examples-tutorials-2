@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.opennms.examples.integration</groupId>
+		<artifactId>kafka-alarm-client</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>kafka-web-docker</artifactId>
+	<packaging>pom</packaging>
+
+	<description>packaging clients as docker containers</description>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>copy war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.opennms.examples.integration</groupId>
+									<artifactId>kafka-web</artifactId>
+									<version>${project.version}</version>
+									<type>war</type>
+									<classifier>exec</classifier>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}\web\</outputDirectory>
+									<destFileName>kafka-web-exec.war</destFileName>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.opennms.examples.integration</groupId>
+									<artifactId>kafka-java-client</artifactId>
+									<version>${project.version}</version>
+									<type>jar</type>
+									<classifier>onejar</classifier>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}\client\</outputDirectory>
+									<destFileName>kafka-java-client-one-jar.jar</destFileName>
+								</artifactItem>
+							</artifactItems>
+							<!-- other configurations here -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.41.0</version>
+				<executions>
+					<execution>
+						<id>build</id>
+						<goals>
+							<goal>build</goal>
+						</goals>
+						<phase>install</phase>
+						<configuration>
+							<images>
+								<image>
+									<name>opennms:kafka-client</name>
+									<alias>kafka-client</alias>
+									<build>
+										<!-- filter>@</filter-->
+										<contextDir>${project.basedir}</contextDir>
+										<dockerFile>Dockerfile-client</dockerFile>
+									</build>
+								</image>
+								<image>
+									<name>opennms:kafka-web</name>
+									<alias>kafka-web</alias>
+									<build>
+										<!-- filter>@</filter-->
+										<contextDir>${project.basedir}</contextDir>
+										<dockerFile>Dockerfile-web</dockerFile>
+									</build>
+								</image>
+							</images>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.opennms.examples.integration</groupId>
+			<artifactId>kafka-java-client</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.opennms.examples.integration</groupId>
+			<artifactId>kafka-web</artifactId>
+			<version>${project.version}</version>
+			<classifier>exec</classifier>
+			<type>war</type>
+		</dependency>
+
+
+	</dependencies>
+
+
+</project>

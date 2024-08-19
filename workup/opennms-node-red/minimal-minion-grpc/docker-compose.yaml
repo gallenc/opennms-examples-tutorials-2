@@ -1,0 +1,167 @@
+---
+version: '3'
+
+volumes:
+  data-postgres: {}
+  data-opennms: {}
+  data-opennms-cfg: {}
+  data-grafana: {}
+#  data-nodered: {}
+  data-influxdb: {}
+  mosquitto-data: {}
+  mosquitto-log: {}
+
+services:
+  # https://hub.docker.com/r/nodered/node-red
+  # https://nodered.org/docs/getting-started/docker
+  node-red1:
+    # image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-nodered}/${NODE_RED_OCI:-node-red}:${NODE_RED_VERSION:-latest}
+    build: ./container-fs/node-red1
+    container_name: node-red1
+    hostname: node-red1
+    environment:
+      TZ: ${TIMEZONE:-America/New_York}
+    volumes:
+      # - data-nodered:/data
+      - ./container-fs/node-red1/flows.json:/data/flows.json
+    ports:
+      - "1880:1880/tcp"
+      
+  influxdb:
+    image: ${DOCKER_REGISTRY:-docker.io}/${INFLUXDB_OCI:-influxdb}:${INFLUXDB_VERSION:-latest}
+    container_name: influxdb
+    hostname: influxdb
+    ports:
+      - '8086:8086'
+    volumes:
+      - data-influxdb:/var/lib/influxdb
+    environment:
+      - INFLUXDB_DB=db0
+      - INFLUXDB_ADMIN_USER=${INFLUXDB_USERNAME}
+      - INFLUXDB_ADMIN_PASSWORD=${INFLUXDB_PASSWORD}      
+      
+ # mqtt5 eclipse-mosquitto
+  mqtt-broker:
+    image: eclipse-mosquitto:2.0.18
+    container_name: mqttbroker
+    ports:
+      - "1883:1883" #default mqtt port
+      - "9001:9001" #default mqtt port for websockets
+    volumes:
+      - ./container-fs/mosquitto/:/mosquitto/config:rw
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-data:/mosquitto/log
+
+  mqtt-web-client:
+     container_name: mqtt-web-client
+     hostname: mqtt-web-client
+     image: vergissberlin/hivemq-mqtt-web-client
+     restart: always
+     ports:
+        - 8081:80
+
+
+  database:
+    image: ${DOCKER_REGISTRY:-docker.io}/postgres:${POSTGRES_VERSION:-13}
+    container_name: database
+    hostname: database
+    environment:
+      TZ: ${TIMEZONE:-America/New_York}
+      POSTGRES_HOST: database
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - data-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+
+  horizon:
+    image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-opennms}/${HORIZON_OCI:-horizon}:${ONMS_VERSION:-bleeding}
+    container_name: horizon
+    hostname: horizon
+    sysctls:
+      net.ipv4.ping_group_range: "0 429496729"
+    depends_on:
+      - database
+    environment:
+      TZ: ${TIMEZONE:-America/New_York}
+    volumes:
+      - data-opennms:/opennms-data
+      - data-opennms-cfg:/opt/opennms/etc
+      - ./container-fs/horizon/opt/opennms/deploy:/opt/opennms/deploy
+      - ./container-fs/horizon/opt/opennms-overlay:/opt/opennms-overlay
+      - ./container-fs/horizon/etc/conf.d/confd.toml:/etc/confd/confd.toml
+    command: ["-s"]
+    ports:
+      - "8101:8101/tcp"
+      - "8980:8980/tcp"
+      - "10162:1162/udp"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "-I", "http://localhost:8980/opennms/login.jsp" ]
+      interval: 1m
+      timeout: 5s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 4G
+      
+  grafana:
+    image: ${DOCKER_REGISTRY:-docker.io}/grafana/grafana:${GRAFANA_VERSION:-latest}
+    container_name: grafana
+    hostname: grafana
+    environment:
+      TZ: ${TIMEZONE:-America/New_York}
+      GF_SECURITY_ADMIN_PASSWORD: mypass
+      GF_INSTALL_PLUGINS: opennms-opennms-app,grafana-piechart-panel,neocat-cal-heatmap-panel,briangann-datatable-panel
+      GF_SERVER_HTTP_PORT: 3000
+      GF_SERVER_PROTOCOL: http
+#      GF_SERVER_DOMAIN: localhost:80
+#      GF_SERVER_ROOT_URL: http://localhost:80/grafana/
+#      GF_SERVER_SERVER_FROM_SUB_PATH: true
+
+    volumes:
+      - data-grafana:/var/lib/grafana
+      - ./container-fs/grafana/provisioning:/etc/grafana/provisioning/
+      - ./container-fs/grafana/conf/conf.ini:/conf/conf.ini
+    ports:
+      - "3000:3000/tcp"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 100M
+
+#  minion1:
+#    image: ${DOCKER_REGISTRY:-docker.io}/${DOCKER_ORG:-opennms}/${MINION_OCI:-minion}:${ONMS_VERSION:-bleeding}
+#    container_name: minion1
+#    hostname: minion1
+#    sysctls:
+#      net.ipv4.ping_group_range: "0 429496729"
+#    environment:
+#      TZ: ${TIMEZONE:-America/New_York}
+#      JAVA_MIN_MEM: 512M
+#      JAVA_MAX_MEM: 2048M
+#    volumes:
+#      - './container-fs/minion1/opt/minion/minion-config.yaml:/opt/minion/minion-config.yaml'
+#    command: ["-f"]
+#    healthcheck:
+#      test: "/health.sh"
+#      interval: 30s
+#      timeout: 20s
+#      retries: 3
+#    ports:
+#      - "8201:8201/tcp"
+#      - "1162:1162/udp"
+#      - "1514:1514/udp"
+#    deploy:
+#      resources:
+#        limits:
+#          cpus: "0.5"
+#          memory: 2560M
+

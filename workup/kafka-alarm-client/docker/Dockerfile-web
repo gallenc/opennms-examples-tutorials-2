@@ -1,0 +1,6 @@
+FROM openjdk:11
+COPY ./target/web /tmp
+COPY ./kafkaclient.properties /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java","-Dkafkaclient.properties=/tmp/kafkaclient.properties","-jar","kafka-web-exec.war"]
+

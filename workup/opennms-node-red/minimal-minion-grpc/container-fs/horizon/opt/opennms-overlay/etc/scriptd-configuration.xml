@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<scriptd-configuration>
+    <engine language="beanshell" className="bsh.util.BeanShellBSFEngine" extensions="bsh"/>
+    <start-script language="beanshell">
+        log = bsf.lookupBean("log");
+        log.debug("Starting Script");
+        
+              
+        import java.util.ArrayList;
+        import java.util.List;
+        import java.text.SimpleDateFormat;
+        import java.util.Date;
+        import org.jsoup.Jsoup;
+
+    </start-script>
+
+    <stop-script language="beanshell">
+
+      log.debug("scriptd stop script");
+
+
+    </stop-script>
+
+    <event-script language="beanshell">
+        event = bsf.lookupBean("event");
+        node =  bsf.lookupBean("node");
+        
+        /* used to select which events will cause messages */
+        if (
+           (event.uei.equals("uei.opennms.org/mqttplugin/message/event/1"))
+        || (event.uei.equals("uei.opennms.org/mqttplugin/message/event/0"))
+
+           )
+        {
+        
+            log.debug("**** script received event ="+ event.toString());
+            log.debug("**** script received node ="+ node.toString());
+            
+
+        }
+        
+    </event-script>
+
+
+</scriptd-configuration>

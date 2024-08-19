@@ -1,0 +1,5877 @@
+[
+    {
+        "id": "5990463343cd786a",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7dc9ec342fd4cc1a",
+        "type": "tab",
+        "label": "DashBoard UI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2052ed2e7583d729",
+        "type": "group",
+        "z": "7dc9ec342fd4cc1a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [],
+        "x": -6,
+        "y": 4459,
+        "w": 40,
+        "h": 40
+    },
+    {
+        "id": "206afb8a444d320c",
+        "type": "group",
+        "z": "7dc9ec342fd4cc1a",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "d94e866f4464d680"
+        ],
+        "x": 34,
+        "y": 5299,
+        "w": 312,
+        "h": 82
+    },
+    {
+        "id": "07a7e725856b9c60",
+        "type": "mqtt-broker",
+        "name": "mqtt-in-controls",
+        "broker": "mqtt-broker",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "1",
+        "birthRetain": "true",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "675af7ab3fa313d7",
+        "type": "influxdb",
+        "hostname": "influxdb",
+        "port": "8086",
+        "protocol": "http",
+        "database": "NOC-FEED",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "242d27116413e535",
+        "type": "Stackhero-InfluxDB-v2-Server",
+        "name": "NOC-GROUNDSTATION",
+        "host": "influxdb",
+        "port": "8086",
+        "tls": false
+    },
+    {
+        "id": "dd456daab39585ba",
+        "type": "ui_tab",
+        "name": "Noc",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bd1f9020205fd50d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 68,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "62e3701a837d101c",
+        "type": "ui_group",
+        "name": "Control Panel",
+        "tab": "dd456daab39585ba",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "899dc13e493aed2f",
+        "type": "ui_group",
+        "name": "Ground Station ",
+        "tab": "dd456daab39585ba",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b57e32c844e692f4",
+        "type": "ui_group",
+        "name": "Site Physical Security",
+        "tab": "dd456daab39585ba",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bfb9bcf8b5d48fb5",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "dd456daab39585ba",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b169114b69e4e681",
+        "type": "mqtt-broker",
+        "name": "fast-api/write/powerAmpDecrease",
+        "broker": "mqtt-broker",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "463ce4113aa6b4e4",
+        "type": "ui_group",
+        "name": "Driver",
+        "tab": "dd456daab39585ba",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6cf7dc5bb9cd8f50",
+        "type": "inject",
+        "z": "5990463343cd786a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "912d99bebabeb7e9"
+            ]
+        ]
+    },
+    {
+        "id": "408002e4f2e499ba",
+        "type": "mqtt in",
+        "z": "5990463343cd786a",
+        "name": "",
+        "topic": "GroundStation/Timer",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "4b215b16ae31ba7a"
+            ]
+        ]
+    },
+    {
+        "id": "4b215b16ae31ba7a",
+        "type": "debug",
+        "z": "5990463343cd786a",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "912d99bebabeb7e9",
+        "type": "mqtt out",
+        "z": "5990463343cd786a",
+        "name": "",
+        "topic": "GroundStation/Timer",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 300,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "8280567fc938ab89",
+        "type": "inject",
+        "z": "5990463343cd786a",
+        "name": "number 10",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "912d99bebabeb7e9"
+            ]
+        ]
+    },
+    {
+        "id": "b8ac60d5b70d4478",
+        "type": "inject",
+        "z": "5990463343cd786a",
+        "name": "hello",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "hello",
+        "payloadType": "str",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "912d99bebabeb7e9"
+            ]
+        ]
+    },
+    {
+        "id": "10468555987447f3",
+        "type": "mqtt in",
+        "z": "5990463343cd786a",
+        "name": "",
+        "topic": "GroundStation1/Door1",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 460,
+        "y": 360,
+        "wires": [
+            [
+                "6616004e9613beaa",
+                "3b3cad3eb4791e21"
+            ]
+        ]
+    },
+    {
+        "id": "b54a63f82ebba0ab",
+        "type": "mqtt out",
+        "z": "5990463343cd786a",
+        "name": "",
+        "topic": "GroundStation1/Door1",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 340,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4e4e2ddf43fffbda",
+        "type": "debug",
+        "z": "5990463343cd786a",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1170,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c128fcbb134be686",
+        "type": "inject",
+        "z": "5990463343cd786a",
+        "name": "Closed",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Closed",
+        "payloadType": "str",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "b54a63f82ebba0ab"
+            ]
+        ]
+    },
+    {
+        "id": "c35a70a56c686964",
+        "type": "inject",
+        "z": "5990463343cd786a",
+        "name": "Open",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Open",
+        "payloadType": "str",
+        "x": 110,
+        "y": 300,
+        "wires": [
+            [
+                "b54a63f82ebba0ab"
+            ]
+        ]
+    },
+    {
+        "id": "6616004e9613beaa",
+        "type": "switch",
+        "z": "5990463343cd786a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Open",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Closed",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 690,
+        "y": 360,
+        "wires": [
+            [
+                "f95b2fdc570c14c9"
+            ],
+            [
+                "7114ae6c80ce2f4c"
+            ]
+        ]
+    },
+    {
+        "id": "f95b2fdc570c14c9",
+        "type": "change",
+        "z": "5990463343cd786a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "The Door is open",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 320,
+        "wires": [
+            [
+                "4e4e2ddf43fffbda"
+            ]
+        ]
+    },
+    {
+        "id": "7114ae6c80ce2f4c",
+        "type": "change",
+        "z": "5990463343cd786a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "The Door is Closed",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 940,
+        "y": 420,
+        "wires": [
+            [
+                "4e4e2ddf43fffbda"
+            ]
+        ]
+    },
+    {
+        "id": "2717080509bf19d7",
+        "type": "debug",
+        "z": "5990463343cd786a",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "3b3cad3eb4791e21",
+        "type": "influxdb out",
+        "z": "5990463343cd786a",
+        "influxdb": "675af7ab3fa313d7",
+        "name": "",
+        "measurement": "Door",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "AALTO",
+        "bucket": "GroundStation1",
+        "x": 1350,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "789e0224c18fbbe9",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandRFDisconnect",
+        "tooltip": "",
+        "group": "62e3701a837d101c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "On",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "Off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "6f4deb56b0dbec81",
+                "567b5019e5a11927"
+            ]
+        ]
+    },
+    {
+        "id": "a2d6b388a446e2e2",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "PowerAmpReset",
+        "tooltip": "",
+        "group": "62e3701a837d101c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "Open",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "Closed",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "2bfab3f0a843acb7",
+                "fa64a369d2d68797"
+            ]
+        ]
+    },
+    {
+        "id": "a6a7330bca2754da",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "RemoteSiteDoor",
+        "tooltip": "",
+        "group": "62e3701a837d101c",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "On",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "Off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 90,
+        "y": 1000,
+        "wires": [
+            [
+                "e7366a12e34791d0",
+                "6fe3768a6d1598b8"
+            ]
+        ]
+    },
+    {
+        "id": "d375884e752fb828",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI00-GSMains/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 1620,
+        "wires": [
+            [
+                "41ca858751a8c1e9",
+                "425b889dfdfe73fa"
+            ]
+        ]
+    },
+    {
+        "id": "e76f1089e7cf3e71",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI01-UPS/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 1740,
+        "wires": [
+            [
+                "4fb6687e20afff0c",
+                "88102e99c9dbe3fc"
+            ]
+        ]
+    },
+    {
+        "id": "f3d54cac3003defc",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI02-QBandPSU/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 1840,
+        "wires": [
+            [
+                "2b7ee2704012a0d3",
+                "292013f7585a3172"
+            ]
+        ]
+    },
+    {
+        "id": "dc2f98d901e5be3f",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI04-QBandRFOvrL/diStatus",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 2060,
+        "wires": [
+            [
+                "0f6efe8c8b5c6af2",
+                "feb47d84990c9ab6"
+            ]
+        ]
+    },
+    {
+        "id": "0377fb27681ea94a",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI05-QBandOverCu/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 2140,
+        "wires": [
+            [
+                "566a775e3cdbec44",
+                "58f6cf7c0b5a16ce"
+            ]
+        ]
+    },
+    {
+        "id": "d5d5292a67dbaceb",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI06-PosCtrlFail/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 2260,
+        "wires": [
+            [
+                "6b177dd3e8277225",
+                "119dbace1e08dcf8"
+            ]
+        ]
+    },
+    {
+        "id": "60e28118860fa0bf",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI07-VSWHigh/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 2320,
+        "wires": [
+            [
+                "bfdbac7a580d67d3",
+                "6ea10307f65d081e"
+            ]
+        ]
+    },
+    {
+        "id": "41ca858751a8c1e9",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "MainsPowerStatus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1090,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "4fb6687e20afff0c",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "UPS",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 810,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "2b7ee2704012a0d3",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandPSU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 650,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "01743936a084501b",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandPA",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 760,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "0f6efe8c8b5c6af2",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandOverRF",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 740,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "566a775e3cdbec44",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandOverCurrent",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 750,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "6b177dd3e8277225",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PositionerControllerFail",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1250,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "bfdbac7a580d67d3",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "VSWRHigh",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1030,
+        "y": 2340,
+        "wires": []
+    },
+    {
+        "id": "b5174e4b64502aa9",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandOverTemp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 810,
+        "y": 2400,
+        "wires": []
+    },
+    {
+        "id": "5d6a426649b57ec8",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Bay1DoorStatus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 760,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "978c4fc8b98ad089",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AntennaPSU",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "244ffbd40dcf1dab",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI08-QBandOverTm/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 2380,
+        "wires": [
+            [
+                "b5174e4b64502aa9",
+                "1aa1cc492acf6e87"
+            ]
+        ]
+    },
+    {
+        "id": "5b16f19487e79d3f",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI09-BayDoorStat/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 2480,
+        "wires": [
+            [
+                "5d6a426649b57ec8",
+                "c40891bc0a0708c2"
+            ]
+        ]
+    },
+    {
+        "id": "ca99d83ed61c40ff",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI10-AntennaPSU/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 2560,
+        "wires": [
+            [
+                "978c4fc8b98ad089",
+                "e7fe547af3aeb218"
+            ]
+        ]
+    },
+    {
+        "id": "433e6d0dc661fbad",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI03-QBandPA_Off/diStatus",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1940,
+        "wires": [
+            [
+                "01743936a084501b",
+                "ed9c3c5a9bce0007"
+            ]
+        ]
+    },
+    {
+        "id": "567b5019e5a11927",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 2,
+        "group": "62e3701a837d101c",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "On",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "Off",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 530,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6f4deb56b0dbec81",
+        "type": "change",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "On",
+                "fromt": "str",
+                "to": "{\"value\":0}",
+                "tot": "str"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "Off",
+                "fromt": "str",
+                "to": "{\"value\":1}",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "2977bd048ba25a77"
+            ]
+        ]
+    },
+    {
+        "id": "2977bd048ba25a77",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/write/45MR-2404-0@QBandPARF_Discon/relayStatus",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 530,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "10855ca023119bdd",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/write/45MR-2404-0@QBandPAReset/relayStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1240,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2bfab3f0a843acb7",
+        "type": "change",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "Closed",
+                "fromt": "str",
+                "to": "{\"value\":1}",
+                "tot": "json"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "Open",
+                "fromt": "str",
+                "to": "{\"value\":0}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 360,
+        "wires": [
+            [
+                "10855ca023119bdd"
+            ]
+        ]
+    },
+    {
+        "id": "fa64a369d2d68797",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 6,
+        "group": "62e3701a837d101c",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Open",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "Closed",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 370,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e7366a12e34791d0",
+        "type": "change",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "On",
+                "fromt": "str",
+                "to": "{\"value\":1}",
+                "tot": "json"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "Off",
+                "fromt": "str",
+                "to": "{\"value\":0}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 1120,
+        "wires": [
+            [
+                "c408bb91d57c52a1"
+            ]
+        ]
+    },
+    {
+        "id": "c408bb91d57c52a1",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/write/45MR-2404-0@Door/relayStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1160,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "6fe3768a6d1598b8",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 9,
+        "group": "62e3701a837d101c",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "On",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "4296fb6175b50729",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/write/45MR-2404-0@QBandPARF_Discon/relayStatus",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1030,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac21bd7317c0f70f",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI00-GSMains/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1480,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "494bb3942791be9e",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "MainsPowerStatus",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1150,
+        "y": 1580,
+        "wires": [
+            [
+                "ac21bd7317c0f70f"
+            ]
+        ]
+    },
+    {
+        "id": "487f180c9e05674e",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI01-UPS/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1650,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "266d56d1f68d50bd",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "UPS",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1290,
+        "y": 1660,
+        "wires": [
+            [
+                "487f180c9e05674e"
+            ]
+        ]
+    },
+    {
+        "id": "e8be788cfc4ebae5",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI02-QBandPSU/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1730,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "4e6f9d5bae284fe1",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandPSU",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1370,
+        "y": 1760,
+        "wires": [
+            [
+                "e8be788cfc4ebae5"
+            ]
+        ]
+    },
+    {
+        "id": "0832f37c5e32d57e",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI03-QBandPA_Off/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1740,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "dd30b5e1010957f8",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandPA",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1360,
+        "y": 1880,
+        "wires": [
+            [
+                "0832f37c5e32d57e"
+            ]
+        ]
+    },
+    {
+        "id": "8c7759fdb03db916",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI04-QBandRFOvrL/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1760,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "374f417039d67f0a",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandOverRF",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1400,
+        "y": 1960,
+        "wires": [
+            [
+                "8c7759fdb03db916"
+            ]
+        ]
+    },
+    {
+        "id": "c3da0635a11df4c2",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI05-QBandOverCu/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1820,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "06d7bd6bd3ab697a",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandOverCurrent",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1390,
+        "y": 2040,
+        "wires": [
+            [
+                "c3da0635a11df4c2"
+            ]
+        ]
+    },
+    {
+        "id": "cd4af97c48182544",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandOverTemp",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1390,
+        "y": 2100,
+        "wires": [
+            [
+                "b970f73537f63b98"
+            ]
+        ]
+    },
+    {
+        "id": "b970f73537f63b98",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI08-QBandOverTm/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1840,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "8e3deb0e71acd679",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "PositionerControllerFailure",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1300,
+        "y": 2320,
+        "wires": [
+            [
+                "c35237a2ab40644d"
+            ]
+        ]
+    },
+    {
+        "id": "c35237a2ab40644d",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI06-PosCtrlFail/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1710,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "672d55cdc6fa5c88",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "VSWRHigh",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1170,
+        "y": 2460,
+        "wires": [
+            [
+                "55b2d16df2e40a4f"
+            ]
+        ]
+    },
+    {
+        "id": "55b2d16df2e40a4f",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI07-VSWHigh/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1630,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "524293c68488b146",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "BayDoorStatus",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1180,
+        "y": 2520,
+        "wires": [
+            [
+                "324201d3c174a753"
+            ]
+        ]
+    },
+    {
+        "id": "324201d3c174a753",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI09-BayDoorStat/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1640,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "21fe77212dd72137",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI10-AntennaPSU/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1680,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "a8378a06928625fe",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "AntennaPSU",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1170,
+        "y": 2560,
+        "wires": [
+            [
+                "21fe77212dd72137"
+            ]
+        ]
+    },
+    {
+        "id": "f31f88698024d40b",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI11-SmokeAlarm/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 2760,
+        "wires": [
+            [
+                "3b0a36cb1da80aab",
+                "64730fd0c3c8db81"
+            ]
+        ]
+    },
+    {
+        "id": "3b0a36cb1da80aab",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SmokeAlarm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 2780,
+        "wires": []
+    },
+    {
+        "id": "3b2c22faeef2174c",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI12-HighHumidit/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 2880,
+        "wires": [
+            [
+                "345293e76f28d48b",
+                "163ad08360e205b6"
+            ]
+        ]
+    },
+    {
+        "id": "345293e76f28d48b",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "HighHumidity",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "a3b37ecdedb7213d",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "SmokeAlarm",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1210,
+        "y": 2760,
+        "wires": [
+            [
+                "ee9e0d55a0c648f6"
+            ]
+        ]
+    },
+    {
+        "id": "ee9e0d55a0c648f6",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI11-SmokeAlarm/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1680,
+        "y": 2760,
+        "wires": []
+    },
+    {
+        "id": "58c0142aaf081a01",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "HighHumidity",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1210,
+        "y": 2900,
+        "wires": [
+            [
+                "85b340f979fb9e44"
+            ]
+        ]
+    },
+    {
+        "id": "85b340f979fb9e44",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI12-HighHumidit/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1670,
+        "y": 2900,
+        "wires": []
+    },
+    {
+        "id": "50d665ed940e07a7",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI13-AirCon/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 3020,
+        "wires": [
+            [
+                "ab0accb49d0aa36c",
+                "ec4d9cbe49299a57"
+            ]
+        ]
+    },
+    {
+        "id": "ab0accb49d0aa36c",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "AirConditioner",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 940,
+        "y": 3040,
+        "wires": []
+    },
+    {
+        "id": "f4e7399889863f70",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "AirConditioner",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1220,
+        "y": 3080,
+        "wires": [
+            [
+                "380c7566b560f03c"
+            ]
+        ]
+    },
+    {
+        "id": "380c7566b560f03c",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI13-AirCon/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1660,
+        "y": 3080,
+        "wires": []
+    },
+    {
+        "id": "4999129f85c6b429",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI14-FanTray/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 3140,
+        "wires": [
+            [
+                "30e9c5bc4d28d2bf",
+                "b76f32a2b77c8f2a"
+            ]
+        ]
+    },
+    {
+        "id": "30e9c5bc4d28d2bf",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "FanTray",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 920,
+        "y": 3160,
+        "wires": []
+    },
+    {
+        "id": "1cdfd8b996e3dcbd",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "FanTray",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1200,
+        "y": 3200,
+        "wires": [
+            [
+                "0826acf2e7800545"
+            ]
+        ]
+    },
+    {
+        "id": "0826acf2e7800545",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI14-FanTray/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1660,
+        "y": 3200,
+        "wires": []
+    },
+    {
+        "id": "1f4137db2f085090",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI15-PosMisalign/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 3260,
+        "wires": [
+            [
+                "f88802eeac0b8f87",
+                "34a20fb3a6b1bb58"
+            ]
+        ]
+    },
+    {
+        "id": "f88802eeac0b8f87",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PositionerMisalignMent",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "ca91cd5f40a43dc7",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "PositionerMisalignment",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1250,
+        "y": 3260,
+        "wires": [
+            [
+                "65fa74f9cfc5f932"
+            ]
+        ]
+    },
+    {
+        "id": "65fa74f9cfc5f932",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-0@DI15-PosMisalign/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1670,
+        "y": 3260,
+        "wires": []
+    },
+    {
+        "id": "606732480ab28992",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 3400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e8fc30fd3830f58",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "QBandRSSIValue dBm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2090,
+        "y": 3420,
+        "wires": []
+    },
+    {
+        "id": "db370d93d62ec5e9",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "QBandRSSIValue",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 3320,
+        "wires": [
+            [
+                "720b6df498f0a582"
+            ]
+        ]
+    },
+    {
+        "id": "720b6df498f0a582",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1760,
+        "y": 3320,
+        "wires": []
+    },
+    {
+        "id": "a33823e6d7fd41c6",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI01-NodeBWBandP/aiValueRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 3540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5a4568688150d3de",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "NodeBWideBandPower - dBm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2230,
+        "y": 3740,
+        "wires": []
+    },
+    {
+        "id": "70c2264a5e879a05",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "NodeBWidebandPower",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1250,
+        "y": 3600,
+        "wires": [
+            [
+                "64439ae601f0aee3"
+            ]
+        ]
+    },
+    {
+        "id": "64439ae601f0aee3",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI01-NodeBWBandP/aiValueRaw",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 2140,
+        "y": 3600,
+        "wires": []
+    },
+    {
+        "id": "67e3665af7d64ee0",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI02-PostMisalig/aiValueRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 3660,
+        "wires": [
+            [
+                "730f2e7c5677a714",
+                "7058e4c2bdd9bb8e"
+            ]
+        ]
+    },
+    {
+        "id": "730f2e7c5677a714",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PositionerMisAlignment",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 3680,
+        "wires": []
+    },
+    {
+        "id": "1c79adf9253d0cd8",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "PositionerMisalignment",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1270,
+        "y": 4640,
+        "wires": [
+            [
+                "4b8b5793aac4d467"
+            ]
+        ]
+    },
+    {
+        "id": "4b8b5793aac4d467",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-3800-0@AI02-PostMisalig/aiValueRaw",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1700,
+        "y": 4640,
+        "wires": []
+    },
+    {
+        "id": "823179cfd9f094ac",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-6810-0@TC-00-SiteTemp/aiValueRaw",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 2140,
+        "y": 4160,
+        "wires": []
+    },
+    {
+        "id": "1706ac9255a1d56a",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "SiteTemperature",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1500,
+        "y": 4180,
+        "wires": [
+            [
+                "823179cfd9f094ac"
+            ]
+        ]
+    },
+    {
+        "id": "d2fbd3e0917aad1d",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "SiteTemperature C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2010,
+        "y": 4000,
+        "wires": []
+    },
+    {
+        "id": "bbe2123ad0bd1259",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-6810-0@TC-00-SiteTemp/aiValueRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 3780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fd4786a461d55ee",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/write/45MR-2404-0@SiteFWReboot/relayStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1250,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "70e44035a7a248bf",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 11,
+        "group": "62e3701a837d101c",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "Off",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "On",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 530,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a72d4b55e61efe5f",
+        "type": "change",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "On",
+                "fromt": "str",
+                "to": "{\"value\":1}",
+                "tot": "json"
+            },
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "Off",
+                "fromt": "str",
+                "to": "{\"value\":0}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 500,
+        "wires": [
+            [
+                "7fd4786a461d55ee"
+            ]
+        ]
+    },
+    {
+        "id": "9537fe9ebff39f2f",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "SiteFWReboot",
+        "tooltip": "",
+        "group": "62e3701a837d101c",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "On",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "Off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 160,
+        "y": 500,
+        "wires": [
+            [
+                "a72d4b55e61efe5f",
+                "70e44035a7a248bf"
+            ]
+        ]
+    },
+    {
+        "id": "327adc6716399a9f",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-6810-0@TC-01-CabTemp/aiValueRaw",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 2140,
+        "y": 4520,
+        "wires": []
+    },
+    {
+        "id": "ec6b87ea556d12b8",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "CabinetTemperature",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1700,
+        "y": 4520,
+        "wires": [
+            [
+                "327adc6716399a9f"
+            ]
+        ]
+    },
+    {
+        "id": "0cbad0383669dda6",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CabinetTemperature C",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 2020,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "345bf6bddead4130",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-6810-0@TC-01-CabTemp/aiValueRaw",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 3960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "da058c5c5da65c1e",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI00-CabTempHigh/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 4140,
+        "wires": [
+            [
+                "5c9857c568c39be5",
+                "809b7c2982cec4fc"
+            ]
+        ]
+    },
+    {
+        "id": "5c9857c568c39be5",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "HighCabinetTemperature",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 970,
+        "y": 4160,
+        "wires": []
+    },
+    {
+        "id": "5b535e3c4ba581bd",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "HighCabinetTemperature",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1270,
+        "y": 4720,
+        "wires": [
+            [
+                "2430152dd3f07c63"
+            ]
+        ]
+    },
+    {
+        "id": "2430152dd3f07c63",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI00-CabTempHigh/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1700,
+        "y": 4720,
+        "wires": []
+    },
+    {
+        "id": "603958360484299c",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI01-RearDoor1/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 4340,
+        "wires": [
+            [
+                "b9bfebe7e29fcae2",
+                "cdf4ac94dea56bed"
+            ]
+        ]
+    },
+    {
+        "id": "b9bfebe7e29fcae2",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "RearDoor1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 4360,
+        "wires": []
+    },
+    {
+        "id": "70bf1f8e3a9cc6a3",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "RearDoor1",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 4800,
+        "wires": [
+            [
+                "adf12a4322b86ec4"
+            ]
+        ]
+    },
+    {
+        "id": "adf12a4322b86ec4",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI01-RearDoor1/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 4800,
+        "wires": []
+    },
+    {
+        "id": "760ba36ae23eb288",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI02-RearDoor2/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 4500,
+        "wires": [
+            [
+                "d546324202a1daad",
+                "ecf9e3a002f81a51"
+            ]
+        ]
+    },
+    {
+        "id": "d546324202a1daad",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "RearDoor2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 4520,
+        "wires": []
+    },
+    {
+        "id": "a5c4da3cf68fd648",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "RearDoor2",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 4900,
+        "wires": [
+            [
+                "55b5a576f35b80c8"
+            ]
+        ]
+    },
+    {
+        "id": "55b5a576f35b80c8",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI02-RearDoor2/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 4900,
+        "wires": []
+    },
+    {
+        "id": "4296899709b813f7",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI03-RearDoor3/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 4640,
+        "wires": [
+            [
+                "e0ccf51a6cab449b",
+                "3a8c3ebf43adf8e8"
+            ]
+        ]
+    },
+    {
+        "id": "e0ccf51a6cab449b",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "RearDoor3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 4660,
+        "wires": []
+    },
+    {
+        "id": "20f9831f4bfcb38e",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "RearDoor3",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 5000,
+        "wires": [
+            [
+                "8f5f350bd58d09ea"
+            ]
+        ]
+    },
+    {
+        "id": "8f5f350bd58d09ea",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI03-RearDoor3/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 5000,
+        "wires": []
+    },
+    {
+        "id": "03b3f8d13c0197f5",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI04-FrontDoor1/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 4800,
+        "wires": [
+            [
+                "1e867620b74cd0c6",
+                "4a1fb8dadfdefee7"
+            ]
+        ]
+    },
+    {
+        "id": "1e867620b74cd0c6",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "FrontDoor1",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 4820,
+        "wires": []
+    },
+    {
+        "id": "5d94134ea6a1d505",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "FrontDoor1",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 5080,
+        "wires": [
+            [
+                "f81a10602882c575"
+            ]
+        ]
+    },
+    {
+        "id": "f81a10602882c575",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI04-FrontDoor1/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 5080,
+        "wires": []
+    },
+    {
+        "id": "e627bbbf6920e032",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI05-FrontDoor2/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 4960,
+        "wires": [
+            [
+                "6b80d56d5e53e73d",
+                "afe5aca232a68a69"
+            ]
+        ]
+    },
+    {
+        "id": "6b80d56d5e53e73d",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "FrontDoor2",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 950,
+        "y": 4980,
+        "wires": []
+    },
+    {
+        "id": "6397f790fbf477f3",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "FrontDoor2",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 5180,
+        "wires": [
+            [
+                "0d9db16f2cf9deda"
+            ]
+        ]
+    },
+    {
+        "id": "0d9db16f2cf9deda",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI05-FrontDoor2/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 5180,
+        "wires": []
+    },
+    {
+        "id": "b4d1ffa9b8b2a1ae",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI06-FrontDoor3/diStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 5140,
+        "wires": [
+            [
+                "09d8a0f1bd601432",
+                "3a510db2404b7479"
+            ]
+        ]
+    },
+    {
+        "id": "09d8a0f1bd601432",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "b57e32c844e692f4",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "FrontDoor3",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 930,
+        "y": 5160,
+        "wires": []
+    },
+    {
+        "id": "e204c3d3389d0d05",
+        "type": "ui_switch",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "FrontDoor3",
+        "tooltip": "",
+        "group": "463ce4113aa6b4e4",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "{\"value\":1}",
+        "onvalueType": "json",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "{\"value\":0}",
+        "offvalueType": "json",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 1230,
+        "y": 5280,
+        "wires": [
+            [
+                "86beb7374b1853fd"
+            ]
+        ]
+    },
+    {
+        "id": "86beb7374b1853fd",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "YAKU001/read/45MR-1601-1@DI06-FrontDoor3/diStatus",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "07a7e725856b9c60",
+        "x": 1690,
+        "y": 5280,
+        "wires": []
+    },
+    {
+        "id": "c251a13bea3e0a05",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "fast-api/write/powerAmpIncrease",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 5420,
+        "wires": [
+            [
+                "fb1ef44053469eda"
+            ]
+        ]
+    },
+    {
+        "id": "fb1ef44053469eda",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "899dc13e493aed2f",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PowerAmpIncrease by dBm",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 560,
+        "y": 5420,
+        "wires": []
+    },
+    {
+        "id": "365e0f438a602396",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "fast-api/write/powerAmpIncrease",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b169114b69e4e681",
+        "x": 480,
+        "y": 5340,
+        "wires": []
+    },
+    {
+        "id": "d15c20c0f61e5f9f",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "fast-api/write/powerAmpDecrease",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 5600,
+        "wires": [
+            [
+                "7b5b65f95109c633"
+            ]
+        ]
+    },
+    {
+        "id": "7b5b65f95109c633",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "899dc13e493aed2f",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "PowerAmpDecrease by dBm - ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 5600,
+        "wires": []
+    },
+    {
+        "id": "24ab3bbbb5b030f5",
+        "type": "mqtt out",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "fast-api/write/powerAmpDecrease",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b169114b69e4e681",
+        "x": 560,
+        "y": 5500,
+        "wires": []
+    },
+    {
+        "id": "a394acc18cd8944d",
+        "type": "ui_text_input",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "label": "Test Input Power Amp Decrease",
+        "tooltip": "",
+        "group": "899dc13e493aed2f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 170,
+        "y": 5500,
+        "wires": [
+            [
+                "24ab3bbbb5b030f5"
+            ]
+        ]
+    },
+    {
+        "id": "c5b77355a5e5655e",
+        "type": "mqtt in",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "",
+        "topic": "fast-api/write/CabinDoorStatus",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "07a7e725856b9c60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 5680,
+        "wires": [
+            [
+                "14a56d97dd4b93c6",
+                "c3e0f34ae21885b5"
+            ]
+        ]
+    },
+    {
+        "id": "14a56d97dd4b93c6",
+        "type": "ui_text",
+        "z": "7dc9ec342fd4cc1a",
+        "group": "899dc13e493aed2f",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "CabindDoorStatus",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 5680,
+        "wires": []
+    },
+    {
+        "id": "d94e866f4464d680",
+        "type": "ui_text_input",
+        "z": "7dc9ec342fd4cc1a",
+        "g": "206afb8a444d320c",
+        "name": "",
+        "label": "Test Input Power Amp Increase",
+        "tooltip": "",
+        "group": "899dc13e493aed2f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 190,
+        "y": 5340,
+        "wires": [
+            [
+                "365e0f438a602396"
+            ]
+        ]
+    },
+    {
+        "id": "425b889dfdfe73fa",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 590,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "88102e99c9dbe3fc",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 590,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "292013f7585a3172",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "ed9c3c5a9bce0007",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 610,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "feb47d84990c9ab6",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "58f6cf7c0b5a16ce",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "119dbace1e08dcf8",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "6ea10307f65d081e",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "1aa1cc492acf6e87",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "c40891bc0a0708c2",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "e7fe547af3aeb218",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "64730fd0c3c8db81",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 2720,
+        "wires": []
+    },
+    {
+        "id": "163ad08360e205b6",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 690,
+        "y": 2840,
+        "wires": []
+    },
+    {
+        "id": "ec4d9cbe49299a57",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 670,
+        "y": 2960,
+        "wires": []
+    },
+    {
+        "id": "b76f32a2b77c8f2a",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 3120,
+        "wires": []
+    },
+    {
+        "id": "34a20fb3a6b1bb58",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 3240,
+        "wires": []
+    },
+    {
+        "id": "592d9e44aeef047a",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3360,
+        "wires": [
+            [
+                "98ca854311b06ae5"
+            ]
+        ]
+    },
+    {
+        "id": "b049baf581e2637b",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3440,
+        "wires": [
+            [
+                "98ca854311b06ae5"
+            ]
+        ]
+    },
+    {
+        "id": "d8e7f5d9e98a4f9f",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3400,
+        "wires": [
+            [
+                "98ca854311b06ae5"
+            ]
+        ]
+    },
+    {
+        "id": "061a8022518b17ec",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3480,
+        "wires": [
+            [
+                "9fb020c886a29ab3"
+            ]
+        ]
+    },
+    {
+        "id": "15e4f4f5a5931b67",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3560,
+        "wires": [
+            [
+                "9fb020c886a29ab3"
+            ]
+        ]
+    },
+    {
+        "id": "22729fb2326ba3cc",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3520,
+        "wires": [
+            [
+                "9fb020c886a29ab3"
+            ]
+        ]
+    },
+    {
+        "id": "ac9cd17a71502219",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":1.0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":3.0}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 2070,
+        "y": 3520,
+        "wires": []
+    },
+    {
+        "id": "7ea723d114db3f0e",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3680,
+        "wires": [
+            [
+                "6941a5920bf84920"
+            ]
+        ]
+    },
+    {
+        "id": "9d333c561c1bbd32",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3760,
+        "wires": [
+            [
+                "6941a5920bf84920"
+            ]
+        ]
+    },
+    {
+        "id": "2aa124a1cc574ee9",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3720,
+        "wires": [
+            [
+                "6941a5920bf84920"
+            ]
+        ]
+    },
+    {
+        "id": "f6bc01c375e4c02d",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3800,
+        "wires": [
+            [
+                "a0dff01cb248b27f"
+            ]
+        ]
+    },
+    {
+        "id": "714f1c6ec6380d77",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3880,
+        "wires": [
+            [
+                "a0dff01cb248b27f"
+            ]
+        ]
+    },
+    {
+        "id": "a12ba88b0134a126",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3840,
+        "wires": [
+            [
+                "a0dff01cb248b27f"
+            ]
+        ]
+    },
+    {
+        "id": "706f0fd2a5899e79",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":3}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 2110,
+        "y": 3820,
+        "wires": []
+    },
+    {
+        "id": "7058e4c2bdd9bb8e",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\": 0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\": 1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 910,
+        "y": 3620,
+        "wires": []
+    },
+    {
+        "id": "66d708994b04d663",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 3960,
+        "wires": [
+            [
+                "792885685076a233"
+            ]
+        ]
+    },
+    {
+        "id": "9a1bc29b671803f9",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4040,
+        "wires": [
+            [
+                "792885685076a233"
+            ]
+        ]
+    },
+    {
+        "id": "afcef294fe8f30f1",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4000,
+        "wires": [
+            [
+                "792885685076a233"
+            ]
+        ]
+    },
+    {
+        "id": "84e4f7343a6eaa30",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4080,
+        "wires": [
+            [
+                "930fb4ef30406d49"
+            ]
+        ]
+    },
+    {
+        "id": "2fd509b13edc047a",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4160,
+        "wires": [
+            [
+                "930fb4ef30406d49"
+            ]
+        ]
+    },
+    {
+        "id": "8207b85f43683eac",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4120,
+        "wires": [
+            [
+                "930fb4ef30406d49"
+            ]
+        ]
+    },
+    {
+        "id": "d676c73f729b58f1",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":40}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":20}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1990,
+        "y": 4080,
+        "wires": []
+    },
+    {
+        "id": "6911ef7ce262212d",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4260,
+        "wires": [
+            [
+                "dc5a4edd474ea0cd"
+            ]
+        ]
+    },
+    {
+        "id": "082a596d28f85c49",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4340,
+        "wires": [
+            [
+                "dc5a4edd474ea0cd"
+            ]
+        ]
+    },
+    {
+        "id": "b127e9182dce7c5a",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4300,
+        "wires": [
+            [
+                "dc5a4edd474ea0cd"
+            ]
+        ]
+    },
+    {
+        "id": "40ff0ebcc7511812",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "start",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "start",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4380,
+        "wires": [
+            [
+                "1bbf15bfbf9be9b2"
+            ]
+        ]
+    },
+    {
+        "id": "b2b3433eee4b5ec1",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "toggle",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4460,
+        "wires": [
+            [
+                "1bbf15bfbf9be9b2"
+            ]
+        ]
+    },
+    {
+        "id": "295e3556fd0b2c3f",
+        "type": "inject",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "stop",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "control",
+        "payload": "stop",
+        "payloadType": "str",
+        "x": 1210,
+        "y": 4420,
+        "wires": [
+            [
+                "1bbf15bfbf9be9b2"
+            ]
+        ]
+    },
+    {
+        "id": "0ffcd5e1a9963a80",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":40}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":20}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 2010,
+        "y": 4380,
+        "wires": []
+    },
+    {
+        "id": "809b7c2982cec4fc",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 650,
+        "y": 4100,
+        "wires": []
+    },
+    {
+        "id": "cdf4ac94dea56bed",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 4280,
+        "wires": []
+    },
+    {
+        "id": "ecf9e3a002f81a51",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 590,
+        "y": 4440,
+        "wires": []
+    },
+    {
+        "id": "3a8c3ebf43adf8e8",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 570,
+        "y": 4580,
+        "wires": []
+    },
+    {
+        "id": "4a1fb8dadfdefee7",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 610,
+        "y": 4740,
+        "wires": []
+    },
+    {
+        "id": "afe5aca232a68a69",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 630,
+        "y": 4900,
+        "wires": []
+    },
+    {
+        "id": "3a510db2404b7479",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "bfb9bcf8b5d48fb5",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 610,
+        "y": 5080,
+        "wires": []
+    },
+    {
+        "id": "c3e0f34ae21885b5",
+        "type": "ui_led",
+        "z": "7dc9ec342fd4cc1a",
+        "order": 7,
+        "group": "899dc13e493aed2f",
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "{\"value\":0}",
+                "valueType": "json"
+            },
+            {
+                "color": "#008000",
+                "value": "{\"value\":1}",
+                "valueType": "json"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 530,
+        "y": 5740,
+        "wires": []
+    },
+    {
+        "id": "98ca854311b06ae5",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "High Event QBandRSSI",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "1",
+        "stdDev": "1",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":3.0}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1670,
+        "y": 3420,
+        "wires": [
+            [
+                "720b6df498f0a582",
+                "3e8fc30fd3830f58",
+                "ac9cd17a71502219"
+            ]
+        ]
+    },
+    {
+        "id": "9fb020c886a29ab3",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "Low Event QBandRSSI",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "1",
+        "stdDev": "1",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":1.0}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1650,
+        "y": 3520,
+        "wires": [
+            [
+                "720b6df498f0a582",
+                "3e8fc30fd3830f58",
+                "ac9cd17a71502219"
+            ]
+        ]
+    },
+    {
+        "id": "6941a5920bf84920",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "High Event NodeB",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "1",
+        "stdDev": "1",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":3.0}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1630,
+        "y": 3720,
+        "wires": [
+            [
+                "5a4568688150d3de",
+                "706f0fd2a5899e79",
+                "64439ae601f0aee3"
+            ]
+        ]
+    },
+    {
+        "id": "a0dff01cb248b27f",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "Low Event NodeB",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "1",
+        "stdDev": "1",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":1.0}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1630,
+        "y": 3840,
+        "wires": [
+            [
+                "5a4568688150d3de",
+                "706f0fd2a5899e79",
+                "64439ae601f0aee3"
+            ]
+        ]
+    },
+    {
+        "id": "792885685076a233",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "High Event Site Temp",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "5",
+        "stdDev": "5",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":40}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1640,
+        "y": 4000,
+        "wires": [
+            [
+                "d676c73f729b58f1",
+                "d2fbd3e0917aad1d",
+                "823179cfd9f094ac"
+            ]
+        ]
+    },
+    {
+        "id": "930fb4ef30406d49",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "Normal Event Site Temp",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "5",
+        "stdDev": "5",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":20}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1650,
+        "y": 4120,
+        "wires": [
+            [
+                "d676c73f729b58f1",
+                "d2fbd3e0917aad1d",
+                "823179cfd9f094ac"
+            ]
+        ]
+    },
+    {
+        "id": "dc5a4edd474ea0cd",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "High Event Cabinet Temp",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "5",
+        "stdDev": "5",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":40}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1650,
+        "y": 4300,
+        "wires": [
+            [
+                "0ffcd5e1a9963a80",
+                "0cbad0383669dda6",
+                "327adc6716399a9f"
+            ]
+        ]
+    },
+    {
+        "id": "1bbf15bfbf9be9b2",
+        "type": "event",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "Normal Event Cabinet Temp",
+        "controlTopic": "control",
+        "startCmd": "start",
+        "stopCmd": "stop",
+        "distribution": "gaussian",
+        "expMeanInterval": 1,
+        "minInterval": "3",
+        "maxInterval": "2",
+        "gaussMeanInterval": "5",
+        "stdDev": "5",
+        "outputTopic": "YAKU001/read/45MR-3800-0@AI00-QBandRSSI/aiValueRaw",
+        "outputPayload": "{\"value\":20}",
+        "outputPayloadType": "json",
+        "maxEventCount": "0",
+        "x": 1660,
+        "y": 4420,
+        "wires": [
+            [
+                "0ffcd5e1a9963a80",
+                "0cbad0383669dda6",
+                "327adc6716399a9f"
+            ]
+        ]
+    },
+    {
+        "id": "eaa5ddca16ce934b",
+        "type": "function",
+        "z": "7dc9ec342fd4cc1a",
+        "name": "function 2",
+        "func": "{ { msg.payload } }\nreturn (msg * msg * 10 * Math.log10(0.05));",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 3660,
+        "wires": [
+            []
+        ]
+    }
+]
