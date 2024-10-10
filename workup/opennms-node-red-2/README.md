@@ -144,8 +144,6 @@ The following images show screenshots of how to set up the display.
 ![alt text](../opennms-node-red/images/OpenNMSGrafanaPlugin1.png "Figure OpenNMSGrafanaPlugin1.png")
 
 
-![alt text](../opennms-node-red/images/OpenNMSGrafanaPlugin2.png "Figure OpenNMSGrafanaPlugin2.png")
-
 
 ![alt text](../opennms-node-red/images/OpenNMSGrafanaPlugin3.png "Figure OpenNMSGrafanaPlugin3.png")
 
@@ -155,4 +153,28 @@ The following images show screenshots of how to set up the display.
 
 ![alt text](../opennms-node-red/images/OpenNMS-alarms-dash.png "Figure OpenNMS-alarms-dash.png")
 
+# Grafana alarms aggregation
+
+### event counts
+
+the following dashboard will work to aggregate events
+
+![alt text](../opennms-node-red/images/GrafanaEventsAggregation.png "Figure GrafanaEventsAggregation.png")
+
+using PostgreSQL plugin (built in)
+
+```
+WITH uniqueEvents AS ( SELECT 
+    events.eventid AS id, eventuei, LEFT(eventsource, STRPOS(eventsource, '/')-1) as site,
+    MAX(CASE WHEN name = 'relay' THEN value END) AS relay,
+    MAX(CASE WHEN name = 'value' THEN value END) AS value
+FROM
+    events INNER JOIN event_parameters ON events.eventid = event_parameters.eventid
+WHERE 
+    eventuei LIKE 'uei.opennms.org/mqttplugin/altohaps/v1/read/DigitalInput/%'
+GROUP BY
+    events.eventid
+)
+SELECT CONCAT(site, ' ',relay), COUNT (relay) FROM uniqueEvents WHERE value ='1' GROUP BY site, relay
+```
 
